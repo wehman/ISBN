@@ -7,7 +7,13 @@
 require "minitest/autorun"
 require_relative "isbn_number_pat.rb"
 
-class TestISBNNumber < Minitest::Test
+class TestISBNNum
+
+	def test_rwad_pass_0s321s14653s0_returns_0321146530
+		assert_equal("0321146530", remove_whitespaces_and_dashes("0 321 14653 0"))
+	end
+
+	def test_rwad_ber < Minitest::Test
 
 	############### testing remove_whitespaces_and_dashes function ##################
 
@@ -16,13 +22,7 @@ class TestISBNNumber < Minitest::Test
 	# s is a space in the test function name
 	def test_rwad_pass_0d321d14653d0_returns_0321146530
 		assert_equal("0321146530", remove_whitespaces_and_dashes("0-321-14653-0"))
-	end
-
-	def test_rwad_pass_0s321s14653s0_returns_0321146530
-		assert_equal("0321146530", remove_whitespaces_and_dashes("0 321 14653 0"))
-	end
-
-	def test_rwad_pass_0s3d21s14d653s0d_returns_0321146530
+	endpass_0s3d21s14d653s0d_returns_0321146530
 		assert_equal("0321146530", remove_whitespaces_and_dashes("0 3-21 14-653 0-"))
 	end
 
