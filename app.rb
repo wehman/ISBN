@@ -1,5 +1,5 @@
 require 'sinatra'
-require_relative "isbn_number.rb"
+require_relative "isbn_number_pat.rb"
 get '/' do
 	#  'Hello Pat!' + ' ' + 'It is Friday.'
 	erb :isbn_input

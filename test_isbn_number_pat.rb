@@ -7,28 +7,29 @@
 require "minitest/autorun"
 require_relative "isbn_number_pat.rb"
 
-class TestISBNNum
-
-	def test_rwad_pass_0s321s14653s0_returns_0321146530
-		assert_equal("0321146530", remove_whitespaces_and_dashes("0 321 14653 0"))
-	end
-
-	def test_rwad_ber < Minitest::Test
+class TestISBNNum < Minitest::Test
 
 	############### testing remove_whitespaces_and_dashes function ##################
 
 	# rwad is remove_whitespaces_and_dashes
 	# d is a dash in the test function name
 	# s is a space in the test function name
-	def test_rwad_pass_0d321d14653d0_returns_0321146530
-		assert_equal("0321146530", remove_whitespaces_and_dashes("0-321-14653-0"))
-	endpass_0s3d21s14d653s0d_returns_0321146530
+
+	def test_rwad_pass_0s321s14653s0_returns_0321146530
+		assert_equal("0321146530", remove_whitespaces_and_dashes("0 321 14653 0"))
+	end
+
+	def test_rwad_pass_0s321s14653s0_returns_0321146530
+		assert_equal("0321146530", remove_whitespaces_and_dashes("0 321 14653 0"))
+	end
+
+	def test_rwad_pass_0s3d21s14d653s0d_returns_0321146530
 		assert_equal("0321146530", remove_whitespaces_and_dashes("0 3-21 14-653 0-"))
 	end
 
-
 	################### testing all_numeric_digits? function ##########################
 	# and is all_numeric_digits? function
+
 	def test_and_pass_1919fdjksl3_return_false
 		assert_equal(false, all_numeric_digits?("1919fdjksl3"))
 	end
